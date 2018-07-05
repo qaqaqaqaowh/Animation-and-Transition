@@ -1,0 +1,62 @@
+.square {
+	height: 200px;
+	width: 200px;
+	box-sizing: border-box;
+}
+
+.expand {
+	transition-property: width, height;
+	transition-duration: 3s;
+}
+
+.expand:hover {
+	height: 500px;
+	width: 500px;
+}
+
+.spin {
+	transition-property: all;
+	transition-duration: 5s;
+}
+
+.spin:hover {
+	transform: rotate(360deg);
+	transform-origin: 50%, 50%;
+}
+
+.move {
+	transition-property: all;
+	transition-duration: 5s;
+}
+
+.move:hover {
+	transform: translate(100px);
+}
+
+.wheel {
+	animation-name: wheel;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+@keyframes wheel {
+	from {transform: rotate(0deg);}
+	to {transform: rotate(360deg);}
+}
+
+.change {
+	animation-name: change;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+@keyframes change {
+	0% {background-color: purple;}
+	20% {background-color: pink;}
+	40% {background-color: #9966ff;}
+	60% {background-color: #3366ff;}
+	80% {background-color: #00ffff;}
+	100% {background-color: purple;}
+}
